@@ -17,38 +17,41 @@ public class Calculator {
 	 * @return int type value total
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
 	 * add() method
-	 * @void, adds a value  
+	 * @void, adds a value to total 
 	 */
 	public void add (int value) {
-		
+		total = total+value;
 	}
 
 	/**
 	 * subtract() method
-	 * @void, subtracts a value  
+	 * @void, subtracts a value from total 
 	 */
 	public void subtract (int value) {
-		
+		total = total-value;
 	}
 
 	/**
 	 * multiply() method
-	 * @void, multiply a value  
+	 * @void, multiply total by value  
 	 */
 	public void multiply (int value) {
-		
+		total = total*value;
 	}
 	/**
 	 * divide() method
-	 * @void, divides a value  
+	 * @void, divides the total by value  
 	 */	
 	public void divide (int value) {
-		
+		if(value == 0)
+			total = 0;
+		else
+			total = total/value ; 
 	}
 
 	/**
