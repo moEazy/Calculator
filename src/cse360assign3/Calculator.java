@@ -1,15 +1,17 @@
 package cse360assign3;
 /**Calculator class that applys simple arithmetics
  * @author : Mohammed Hussein
- * @version: 20/21/2016
+ * @version: 20/22/2016
  */
 public class Calculator {
 
 	private int total;
+	private String theHistory;
 
 	/** default constructor */
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		theHistory= 0+"";
 	}
 	
 	/**
@@ -26,6 +28,7 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		total = total+value;
+		theHistory= theHistory + " + " +value;
 	}
 
 	/**
@@ -34,6 +37,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total = total-value;
+		theHistory= theHistory + " - " +value;
 	}
 
 	/**
@@ -42,6 +46,7 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total = total*value;
+		theHistory= theHistory + " * " +value;
 	}
 	/**
 	 * divide() method
@@ -52,6 +57,7 @@ public class Calculator {
 			total = 0;
 		else
 			total = total/value ; 
+		theHistory= theHistory + " / " +total;
 	}
 
 	/**
@@ -59,6 +65,6 @@ public class Calculator {
 	 * @String, returns arithmetic history  
 	 */
 	public String getHistory () {
-		return "";
+		return theHistory;
 	}
 }

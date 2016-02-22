@@ -65,15 +65,27 @@ public class CalculatorTest {
 		
 		assertEquals("0", String.valueOf(calc.getTotal()));
 	}
+	
 	@Test
-	public void getHistory() {
+	public void TestGetTotal() {
+		Calculator calc = new Calculator();
+		calc.add(20);
+		calc.subtract(10);
+		calc.multiply(5);
+		calc.divide(5);
+		
+		assertEquals("10", String.valueOf(calc.getTotal()));
+	}
+	
+	@Test
+	public void TestgetHistory() {
 		Calculator calc = new Calculator();
 		calc.add(15);
 		calc.subtract(10);
 		calc.multiply(5);
 		calc.divide(5);
 		
-		assertEquals("", calc.getHistory());
+		assertEquals("0 + 15 - 10 * 5 / 5", calc.getHistory());
 	}
 	
 
